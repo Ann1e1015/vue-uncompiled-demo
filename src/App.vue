@@ -1,9 +1,3 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
@@ -12,6 +6,22 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  render(h) {
+    return h('div',
+    {
+      attrs: { id: 'app' }
+    },
+    [
+      h(
+        'img',
+        { attrs: { alt: 'Vue logo', src: require('./assets/logo.png') }}
+      ),
+      h(
+        'hello-world',
+        { attrs: { msg: 'Welcome to Your Vue.js App' }}
+      )
+    ])
   }
 }
 </script>
