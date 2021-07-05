@@ -20,5 +20,17 @@ npm run build
 npm run lint
 ```
 
+### E2E测试：创建快照
+
+```sh
+npm run snapshot
+```
+
+### E2E测试：快照比对
+
+```sh
+npm run e2e
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
